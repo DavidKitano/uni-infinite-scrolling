@@ -1,0 +1,77 @@
+.FooterTabBarBox {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 3rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-top: solid 1px #e9e9e9;
+}
+
+.HeadTabBarItems {
+    position: relative;
+    box-sizing: border-box;
+
+    button:not(.adds),
+    button {
+        line-height: 2.5em;
+        height: 2.5em;
+        font-family: 'Microsoft YaHei', '微软雅黑';
+    }
+
+    .adds {
+        margin: 0 auto;
+        line-height: 0.9em;
+        background-color: red;
+        border-radius: 0.5rem;
+        height: 0.9em;
+        width: 3.5rem;
+        color: white;
+        font-size: 3rem;
+        font-family: Arial;
+    }
+}
+
+.msgCount {
+    display: block;
+    position: absolute;
+    top: 0.4rem;
+    right: -0.6rem;
+    width: max-content;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    min-width: 1rem;
+    min-height: 1rem;
+    line-height: 1rem;
+    border-radius: 20rem;
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.invisible {
+    display: none;
+}
+
+.inactive {
+    color: #5a5a5a !important;
+    border: solid 1px transparent;
+}
+
+.active {
+    color: #000000 !important;
+    font-size: 1.3rem;
+    font-weight: 600;
+}

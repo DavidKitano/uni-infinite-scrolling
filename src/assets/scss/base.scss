@@ -1,0 +1,16 @@
+/** 初始化按钮 **/
+button {
+    &:after {
+        outline: none;
+        border: none;
+        border-radius: 0;
+        -webkit-appearance: none; // Chrome
+    }
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    line-height: inherit;
+    overflow: hidden;
+    color: black;
+}

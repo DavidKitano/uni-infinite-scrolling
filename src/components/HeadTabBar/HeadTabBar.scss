@@ -1,0 +1,70 @@
+.HeadTabBarBox {
+    width: 100vw;
+    height: max-content;
+    overflow: hidden;
+}
+
+.HeadTabBar {
+    width: 90vw;
+    height: max-content;
+    overflow: hidden;
+    margin: 0.5rem auto;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+
+    .icon {
+        font-size: 1.5rem;
+    }
+
+    .HeadTabBarItemsBox {
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+        font-size: 1rem;
+    }
+
+    .HeadTabBarItems {
+        font-weight: 400;
+
+        .active {
+            color: #5a5a5a !important;
+            border-bottom: solid 0.15rem orangered;
+            border-radius: 0;
+        }
+
+        .inactive {
+            color: #b0b0b0 !important;
+            border-bottom: solid 0.15rem transparent;
+            border-radius: 0;
+        }
+    }
+}
+
+.SearchBar {
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    width: 90vw;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    border-radius: 1rem;
+
+    input {
+        width: 10rem;
+        font-size: 0.9rem;
+        color: #5a5a5a;
+        display: inline-block;
+        margin-left: 0.5em;
+        background-color: #f0f0f0;
+    }
+
+    .inputPlaceholder {
+        font-size: 0.9rem;
+        color: #b0b0b0;
+    }
+}
