@@ -67,5 +67,7 @@ const contents = reactive([
 </script>
 
 <style lang="scss" scoped>
+@import 'normalize.css';
+@import '../../assets/scss/base.scss';
 @import './index.scss';
 </style>

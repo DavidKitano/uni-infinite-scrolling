@@ -32,5 +32,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import 'normalize.css';
+@import '../../assets/scss/base.scss';
 @import './ContentBox.scss';
 </style>
