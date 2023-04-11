@@ -14,3 +14,42 @@ button {
     overflow: hidden;
     color: black;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+//横屏
+@media only all and (orientation: landscape) {
+    .portrait {
+        display: none;
+    }
+
+    .landscape {
+        display: block;
+    }
+
+    // 高度大于600px也是可以接受的（如iPad Mini）
+    @media only all and (min-height:600px) {
+        .portrait {
+            display: block;
+        }
+
+        .landscape {
+            display: none;
+        }
+    }
+}
+
+//竖屏
+@media only all and (orientation: portrait) {
+    .portrait {
+        display: block;
+    }
+
+    .landscape {
+        display: none;
+    }
+}

@@ -58,4 +58,10 @@ export default {
 @import 'normalize.css';
 @import '../../assets/scss/base.scss';
 @import './XLevelScrollView.scss';
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
 </style>

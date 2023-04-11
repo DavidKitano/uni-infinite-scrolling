@@ -14,14 +14,12 @@ onHide(() => {
 @import 'normalize.css';
 @import './assets/scss/base.scss';
 
-/* *,
-page {
-  background-color: #FAFAFA;
-} */
-
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  background-color: transparent;
+page,
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 </style>

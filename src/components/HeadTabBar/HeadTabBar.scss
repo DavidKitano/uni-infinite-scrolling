@@ -1,6 +1,7 @@
 .HeadTabBarBox {
     width: 100vw;
-    height: max-content;
+    // height: 11vh;
+    height: 6rem;
     overflow: hidden;
 }
 
@@ -9,7 +10,6 @@
     height: max-content;
     overflow: hidden;
     margin: 0.5rem auto;
-    margin-top: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     display: flex;

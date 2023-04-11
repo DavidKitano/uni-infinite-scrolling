@@ -24,7 +24,7 @@
 
 
 <script lang="ts">
-import Camera from '../Icons/camera.vue'
+import Camera from '../Icons/Camera.vue'
 import Search from '../Icons/Search.vue'
 
 export default {

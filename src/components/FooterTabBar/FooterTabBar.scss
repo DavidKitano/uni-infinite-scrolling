@@ -17,14 +17,17 @@
     font-size: 1.2rem;
     font-weight: 500;
     border-top: solid 1px #e9e9e9;
+    background-color: white;
 }
 
 .HeadTabBarItems {
     position: relative;
     box-sizing: border-box;
+    overflow: visible;
 
     button:not(.adds),
     button {
+
         line-height: 2.5em;
         height: 2.5em;
         font-family: 'Microsoft YaHei', '微软雅黑';
