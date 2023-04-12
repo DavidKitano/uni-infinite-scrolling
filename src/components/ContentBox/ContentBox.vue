@@ -1,14 +1,35 @@
 <template>
   <view class="ContentBox">
-    <img :src="imgUrl" alt="网络错误" loading=" lazy" width="100%" decoding="async" />ContentBox
-    <slot></slot> {{ imgUrl }}
+    <image :src="imgUrl" mode="widthFix" alt="网络错误" :lazy-load="true" :draggable="false" />
+    <view class="ContentText">
+      <slot name="text">加载中...</slot>
+    </view>
+    <view class="ContentBar">
+      <view class="idBar">
+        <image class="avatar" :src="avatarUrl" mode="scaleToFill" alt="网络错误" :lazy-load="true" :draggable="false"></image>
+        <text class="id">
+          <slot name=id>
+            加载中...
+          </slot>
+        </text>
+      </view>
+      <view class="likeBar">
+        <Heart>
+          <slot name="like">0</slot>
+        </Heart>
+      </view>
+    </view>
   </view>
 </template>
 
 <script lang="ts">
+import Heart from '../Icons/Heart.vue'
 export default {
   name: "ContentBox",
-  props: ['imgUrl'],
+  props: ['imgUrl', 'avatarUrl'],
+  components: {
+    Heart
+  },
   data() {
     return {}
   },

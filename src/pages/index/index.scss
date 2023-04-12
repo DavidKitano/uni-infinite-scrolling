@@ -2,8 +2,32 @@
     position: relative;
     box-sizing: content-box;
     margin-top: -5px;
-    height: max-content;
-    max-height: 50vh;
+    height: 60%;
+
+    @media only screen and (device-aspect-ratio:390/844) {
+        height: 74%;
+    }
+
+    // @media only all and (min-height:630px) {
+    //     max-height: 67vh;
+    // }
+
+    // @media only all and (min-height:720px) {
+    //     @media only all and (min-width:500px) {
+    //         max-height: 58.5vh;
+    //     }
+
+    //     max-height: 72.5vh;
+    // }
+
+    // @media only all and (min-height:800px) {
+    //     max-height: 74.5vh;
+    // }
+
+    // @media only all and (min-height:1000px) {
+    //     max-height: 62vh;
+    // }
+
     padding-bottom: 100vh; // 将以下所有内容填充背景色
     background-color: #FAFAFA;
     overflow: scroll;

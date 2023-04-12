@@ -1,12 +1,67 @@
 .ContentBox {
     width: 10.5rem;
-    min-height: 14rem;
-    max-height: 17rem;
-    border: solid 1px red;
     overflow: hidden;
     box-sizing: border-box;
     background-color: white;
     margin: 0 auto;
     margin-top: 1rem;
-    vertical-align: top
+    padding-top: 1rem;
+
+    .ContentText {
+        box-sizing: border-box;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: black;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        overflow: hidden; // 溢出隐藏
+        text-overflow: ellipsis; // 溢出用省略号显示
+        display: -webkit-box; // 作为弹性伸缩盒子模型显示。
+        -webkit-box-orient: vertical; // 设置伸缩盒子的子元素排列方式：从上到下垂直排列
+        -webkit-line-clamp: 2; // 显示的行数
+    }
+
+    .id {
+        display: inline-block;
+        font-size: 0.8rem;
+        margin-left: 0.25rem;
+        vertical-align: super;
+    }
+
+    .idBar {
+        box-sizing: border-box;
+        overflow: hidden;
+        height: 1.5em;
+    }
+
+    image,
+    img {
+        width: 10.5rem;
+        margin-bottom: 1rem;
+        vertical-align: middle;
+    }
+
+    .ContentBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .likeBar {
+        display: inline-block;
+        font-size: 1rem;
+        vertical-align: middle;
+    }
+
+    .avatar {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        clip-path: circle();
+        vertical-align: middle;
+    }
 }

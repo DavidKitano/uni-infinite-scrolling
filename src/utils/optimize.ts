@@ -56,3 +56,27 @@ export function timestamp(url: String) {
     url = url + '?timestamp=' + getTimestamp;
     return url;
 }
+
+/**
+ * 
+ * @param url 
+ * @param ratioW 
+ * @returns (ratioW / tmpW) * tmpH;
+ */
+export async function getNaturalHW(url: string, ratioW: number) {
+    return new Promise<any>((resolve) => {
+        const imgTmp = new Image();
+        imgTmp.src = url;
+        let tmpH = 0, tmpW = 0;
+        imgTmp.onload = () => {
+            tmpH = imgTmp.naturalHeight;
+            tmpW = imgTmp.naturalWidth;
+            let res = (ratioW / tmpW) * tmpH;
+            // console.log('处理结果', res);
+            resolve({
+                res,
+            });
+        }
+    })
+
+}
