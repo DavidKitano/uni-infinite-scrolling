@@ -1,5 +1,7 @@
 /** 防抖计时器 */
 let debounceTimer: any;
+/** 节流计时器 */
+let throttleTimer: any;
 /** 在立即触发后的一个布尔量指示是否进入防抖路径而非立即路径 */
 let debounceInterrupt: boolean;
 
@@ -44,6 +46,31 @@ export function debounce(fn: Function | undefined | null, delay: number | undefi
             }, delay);
         }
     })()
+}
+
+/**
+ * 手写节流函数
+ * @param fn 函数
+ * @param delay 延迟
+ * @returns 函数
+ */
+export function throttle(fn: Function | undefined | null, delay: number | undefined) {
+    if (typeof delay !== 'number' || !delay) {
+        delay = 1500;
+    }
+    if (typeof fn !== 'function') {
+        console.error('No Function detected!!');
+        return;
+    }
+    return (function (this: any, ...args: any[]) {
+        if (throttleTimer) {
+            return;
+        }
+        throttleTimer = setTimeout(() => {
+            fn.apply(this, args);
+            throttleTimer = null;
+        }, delay)
+    })
 }
 
 /**
