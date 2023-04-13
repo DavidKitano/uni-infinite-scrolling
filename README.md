@@ -2,7 +2,7 @@
 
 This is a simple infinite scrolling realization, which used Vue3, Vite, TypeScript, Scss/Sass, Uniapp(DCloud), Normalize.css etc.. Uni stands for Uniapp the frame developed by DCloud.
 
-Several algorithms and performance optimization included, such as handwriting debounce, throttle and so on.
+Several algorithms, multi platform and terminal compatible and performance optimization included, such as handwriting debounce, throttle and so on.
 
 Project views are developed with references to a Chinese app called Xiaohongshu (a.k.a. Red Little Book) interface, whose natural language is based in Mandarin.
 
@@ -10,7 +10,7 @@ Placeholder images are from [Placeholder](https://placehold.it).
 
 这是一个简单的图文无限滚动瀑布流实现，使用技术涉及Vue3, Vite, TypeScript, Scss/Sass, Uniapp, Nomarlize.css等。
 
-包含一部分算法以及性能优化内容，如手写的节流与防抖等。
+包含一部分算法、多平台多终端兼容以及性能优化内容，如手写的节流与防抖等。
 
 项目语言为中文，参考了小红书的界面。
 
