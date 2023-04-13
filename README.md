@@ -4,7 +4,7 @@ This is a simple infinite scrolling realization, which used Vue3, Vite, TypeScri
 
 这是一个简单的图文无限滚动瀑布流实现，使用技术涉及Vue3, Vite, TypeScript, Scss/Sass, Uniapp, Nomarlize.css等。
 
-Project views are developed with references to the Xiaohongshu (a.k.a. Red Little Book) interface, whose natural language is based in Mandarin.
+Project views are developed with references to a Chinese app called Xiaohongshu (a.k.a. Red Little Book) interface, whose natural language is based in Mandarin.
 
 项目语言为中文，参考了小红书的界面。
 
