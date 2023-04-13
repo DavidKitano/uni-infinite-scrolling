@@ -58,24 +58,39 @@ export function timestamp(url: String) {
 }
 
 /**
- * 
- * @param url 
- * @param ratioW 
- * @returns (ratioW / tmpW) * tmpH;
+ * 获取换算高度
+ * @param url 图片链接
+ * @param ratioW 换算比率
+ * @returns Object，换算高度res或换算高度res与错误图片替换链接newUrl
  */
-export async function getNaturalHW(url: string, ratioW: number) {
+export async function getRatioHW(url: string, ratioW: number) {
     return new Promise<any>((resolve) => {
-        const imgTmp = new Image();
-        imgTmp.src = url;
-        let tmpH = 0, tmpW = 0;
-        imgTmp.onload = () => {
-            tmpH = imgTmp.naturalHeight;
-            tmpW = imgTmp.naturalWidth;
-            let res = (ratioW / tmpW) * tmpH;
-            // console.log('处理结果', res);
+        try { // 若抛出错误则算作加载失败
+            const imgTmp = new Image();
+            imgTmp.src = url;
+            imgTmp.onerror = () => {
+                let res = (ratioW / 350) * 300;
+                let newUrl = '../../static/Internet_Error.png'; // 图片加载失败
+                resolve({
+                    res, newUrl
+                })
+            }
+            let tmpH = 0, tmpW = 0;
+            imgTmp.onload = () => {
+                tmpH = imgTmp.naturalHeight;
+                tmpW = imgTmp.naturalWidth;
+                let res = (ratioW / tmpW) * tmpH;
+                // console.log('处理结果', res);
+                resolve({
+                    res,
+                });
+            }
+        } catch {
+            let res = (ratioW / 350) * 300;
+            let newUrl = '../../static/Internet_Error.png';
             resolve({
-                res,
-            });
+                res, newUrl
+            })
         }
     })
 

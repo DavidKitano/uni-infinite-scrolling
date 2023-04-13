@@ -26,6 +26,7 @@
 <script lang="ts">
 import Camera from '../Icons/Camera.vue'
 import Search from '../Icons/Search.vue'
+import * as server_sim from '@/utils/serverSimulator'
 
 export default {
   name: "HeadTabBar",
@@ -33,6 +34,7 @@ export default {
     return {
       searchContent: "",
       placeholder: "",
+      placeholders: [""],
       searchColor: "#b0b0b0",
       localPlace: "同城"
     }
@@ -42,8 +44,11 @@ export default {
     getPlaceholder: () => {
       // 通过后台/其它算法获取placeholder
       // let res = ....
-      let res = '妆容画廊';
-      return `大家都在搜 "${res}"`;
+      let res = server_sim.placeholder;
+      for (let i = 0; i < res.length; i++) {
+        res[i] = "大家都在搜 \"" + res[i] + "\"";
+      }
+      return res;
     },
     search: (content: string) => {
       // 搜索
@@ -57,7 +62,7 @@ export default {
     },
     getLocalPlace: () => {
       // 通过算法获取当前同城位置
-      let res = '深圳'
+      let res = server_sim.city;
       return res;
     }
   },
@@ -69,8 +74,24 @@ export default {
 
   // 组件周期函数--监听组件挂载完毕
   mounted() {
-    this.placeholder = this.getPlaceholder();
+    this.placeholders.pop(); // 初始化
+    this.placeholders = this.getPlaceholder();
     this.localPlace = this.getLocalPlace();
+    console.log(this.placeholders);
+
+    let i = 0;
+    let _this = this;
+    function changePlaceholder() {
+      _this.placeholder = _this.placeholders[i];
+      i++;
+      if (i >= _this.placeholders.length) {
+        i = 0;
+      }
+      setTimeout(() => {
+        changePlaceholder();
+      }, 5200);
+    }
+    changePlaceholder();
   },
   // 组件周期函数--监听组件数据更新之前
   beforeUpdate() { },
