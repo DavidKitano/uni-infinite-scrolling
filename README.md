@@ -28,11 +28,11 @@ These two preview pages are ran in real iPhone 12 Pro Safari (Address bar hidden
 
 ## Safari (iPhone 12 Pro)
 
-![alt Safari (iPhone 12 Pro)](./README_img/safari_(1).png "Safari (iPhone 12 Pro)")
+![alt Safari (iPhone 12 Pro)](./README_img/safari_(1).PNG "Safari (iPhone 12 Pro)")
 
-![alt Safari (iPhone 12 Pro)](./README_img/safari_(2).png "Safari (iPhone 12 Pro)")
+![alt Safari (iPhone 12 Pro)](./README_img/safari_(2).PNG "Safari (iPhone 12 Pro)")
 
-![alt Safari (iPhone 12 Pro)](./README_img/safari_(3).png "Safari (iPhone 12 Pro)")
+![alt Safari (iPhone 12 Pro)](./README_img/safari_(3).PNG "Safari (iPhone 12 Pro)")
 
 # To Build & Notes ⭐ 构建方法与注意事项
 
