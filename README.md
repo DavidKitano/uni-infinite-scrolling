@@ -24,15 +24,19 @@ These two preview pages are ran in real iPhone 12 Pro Safari (Address bar hidden
 
 ## Google Chrome
 
-![alt Google Chrome](./README_img/chrome.png "Google Chrome")
+<img decoding="async" src="./README_img/chrome.png" width="50%" title="Google Chrome" alt="Google Chrome">
 
 ## Safari (iPhone 12 Pro)
 
-![alt Safari (iPhone 12 Pro)](./README_img/safari_(1).PNG "Safari (iPhone 12 Pro)")
+<div style="display: flex; justify-content: space-between">
 
-![alt Safari (iPhone 12 Pro)](./README_img/safari_(2).PNG "Safari (iPhone 12 Pro)")
+<img decoding="async" src="./README_img/safari_(1).PNG" width="30%" title="Safari (iPhone 12 Pro) - 1" alt="Safari (iPhone 12 Pro) - 1">
 
-![alt Safari (iPhone 12 Pro)](./README_img/safari_(3).PNG "Safari (iPhone 12 Pro)")
+<img decoding="async" src="./README_img/safari_(2).PNG" width="30%" title="Safari (iPhone 12 Pro) - 2" alt="Safari (iPhone 12 Pro) - 2">
+
+<img decoding="async" src="./README_img/safari_(3).PNG" width="30%" title="Safari (iPhone 12 Pro) - 3" alt="Safari (iPhone 12 Pro) - 3">
+
+</div><br />
 
 # To Build & Notes ⭐ 构建方法与注意事项
 
